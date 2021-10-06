@@ -1,3 +1,3 @@
 # RSP
-Rock, scissors, paper
-TOP - 20211006
+# Rock, scissors, paper
+# TOP - 20211006
