@@ -6,10 +6,9 @@
 function computerPlay() {
     var list = ["rock", "scissors", "paper"];
     let res = list[Math.floor(Math.random()*list.length)];
-    return res;
     console.log(res);
+    return res;
 }
-// computerPlay();
 
 // input the necessary arguments to determine a victor in RPS
 function singleRound(playerSelection, computerSelection) {
@@ -44,7 +43,10 @@ function singleRound(playerSelection, computerSelection) {
     }// end if
     
 }// end singleRound() 
+console.log(singleRound('paper', computerPlay()));
 
-console.log(singleRound('scissors', 'paper'));
+
+// Run singleRound 5 times
+
 
 
