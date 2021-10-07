@@ -49,10 +49,21 @@ function singleRound(playerSelection, computerSelection) {
 // Run singleRound 5 times
 function game() {
     let playerCounter = 0;
-    // let computerCounter = 0;
+    let computerCounter = 0;
+    let tiesCounter = 0;
     for (i = 1; i <= 5; i++) {
         let playerSelection3 = window.prompt('Choose Rock, Paper, Scissors');
-        console.log(singleRound(playerSelection3, computerPlay()));
+        let x = singleRound(playerSelection3, computerPlay());
+        console.log(x);
+        if(x == 'Human wins!!!') {
+            playerCounter++;
+        } else if (x == "Computer wins!!!") {
+            computerCounter++;
+        } else if (x == "Tie!!!") {
+            tiesCounter++;
+        }
+        console.log("Human: " + playerCounter + " Computer: " + computerCounter + " Ties: " + tiesCounter);
+        // console.log(singleRound(playerSelection3, computerPlay()));
     }    
 }
 
