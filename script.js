@@ -43,10 +43,18 @@ function singleRound(playerSelection, computerSelection) {
     }// end if
     
 }// end singleRound() 
-console.log(singleRound('paper', computerPlay()));
+// console.log(singleRound('rock', computerPlay()))
 
 
 // Run singleRound 5 times
+function game() {
+    // let playerCounter = 0;
+    // let computerCounter = 0;
+    for (i = 1; i <= 5; i++) {
+        let playerSelection3 = window.prompt('Choose Rock, Paper, Scissors');
+        console.log(singleRound(playerSelection3, computerPlay()));
+    }    
+}
 
 
-
+game();
