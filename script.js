@@ -53,7 +53,7 @@ function game() {
     let tiesCounter = 0;
     for (i = 1; i <= 5; i++) {
         let playerSelection3 = window.prompt('Choose Rock, Paper, Scissors');
-        let x = singleRound(playerSelection3, computerPlay());
+        let x = singleRound(playerSelection3,  computerPlay() /*'rock'*/);
         console.log(x);
         if(x == 'Human wins!!!') {
             playerCounter++;
@@ -64,7 +64,16 @@ function game() {
         }
         console.log("Human: " + playerCounter + " Computer: " + computerCounter + " Ties: " + tiesCounter);
         // console.log(singleRound(playerSelection3, computerPlay()));
-    }    
+    } 
+    if( playerCounter > computerCounter) {
+        console.log("Human victory!!!");
+    } else if (playerCounter < computerCounter) {
+        console.log("Computer victory!!!");
+    } else if (playerCounter == computerCounter) {
+        console.log("Tie game, try again!!!");
+    } else {
+        console.log("We may have a problem with logic");
+    }
 }
 
 
