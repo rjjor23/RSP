@@ -13,13 +13,77 @@ body {
   background-color: #c4c4c4;
   /* margin: 0 auto; */
   width: 100vw;
-  height:100vh;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  height: 100vh;
+  overflow: hidden;
+  /* border-left: 1px solid black;
+  border-right: 1px solid black; */
   display: flex;
   flex-direction: column;
 } 
 
+.title {
+  /* border: 2px solid red; */
+  flex: 0 0 16%;
+  text-align: center;
+}
+
+.blocks {
+  flex: 0 0 38%;
+  /* border: 2px solid yellow; */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.block {
+  border: .15rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.1rem;
+  padding: .4rem .4rem;
+  transition: all .07s ease;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.block:hover {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+  cursor: pointer; 
+}
+.results {
+  flex: 0 0 48%;
+  /* border: 2px solid blue; */
+}
+
+.results > h3 {
+  /* border: 2px solid yellow; */
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+}
+.scoring {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.score {
+  flex: 1 0 33%;
+  /* width: 200px; */
+  height: 120px; 
+  border: 2px solid red;
+  margin: 4px;
+}
+
+.scoreTitle {
+  border: 2px solid yellow;
+  text-align: center;
+}
 @media screen and (min-width: 760px) {
 .container {
   background-color: #c4c4c4;
