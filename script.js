@@ -48,9 +48,12 @@ function singleRound(playerSelection, computerSelection) {
 
 // Run singleRound 5 times
 function game() {
+    // local variables
     let playerCounter = 0;
     let computerCounter = 0;
     let tiesCounter = 0;
+
+    // game logic
     for (i = 1; i <= 5; i++) {
         let playerSelection3 = window.prompt('Choose Rock, Paper, Scissors');
         let x = singleRound(playerSelection3,  computerPlay() /*'rock'*/);
@@ -77,7 +80,7 @@ function game() {
 }
 
 
-game();
+// game();
 
 // let a = 0;
 // let b = 0;
