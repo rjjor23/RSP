@@ -14,7 +14,7 @@ function computerPlay() {
 function singleRound(playerSelection, computerSelection) {
     // local variable
     let victor = '';
-    let playerSelection2 = playerSelection;
+    let playerSelection2 = playerSelection.toLowerCase();
     console.log(playerSelection);
     // logic
     
