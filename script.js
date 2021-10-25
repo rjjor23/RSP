@@ -7,6 +7,9 @@ let playerScore = 0;
 let computerScore = 0;
 let roundWinner = '';
 
+const player = document.querySelector('#playerScore');
+const computer = document.querySelector('#computerScore');
+
 const blocks = document.querySelectorAll('.block');
 // console.log(blocks);
 
