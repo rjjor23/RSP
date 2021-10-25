@@ -30,7 +30,7 @@ body {
 }
 
 .blocks {
-  flex: 0 0 38%;
+  flex: 0 0 30%;
   /* border: 2px solid yellow; */
   align-items: center;
   justify-content: center;
@@ -88,7 +88,7 @@ body {
 .scoring {
   display: flex;
   justify-content: center;
-  padding: 12px;
+  padding: 8px;
 }
 .score {
   flex: 1 0 33%;
