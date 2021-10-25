@@ -2,90 +2,70 @@
 // Project from the OP boot camp
 // 20211006 
 
+// variables
+let playerScore = 0;
+let computerScore = 0;
+let roundWinner = '';
+
+const blocks = document.querySelectorAll('.block');
+// console.log(blocks);
+
+// game logic
+blocks.forEach((block) => {
+  block.addEventListener('click', () => {
+    const img = block.querySelector('img');
+    let playerChoice = img.alt.toLowerCase();
+    let computerChoice = computerPlay();
+    console.log(playerChoice, computerChoice);
+    singleRound(playerChoice, computerChoice);
+    console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+  });
+});
+
+
 // Returns Rock | Paper | Scissors randomly
 function computerPlay() {
-    var list = ["rock", "scissors", "paper"];
-    let res = list[Math.floor(Math.random()*list.length)];
-    console.log(res);
-    return res;
+  var list = ["rock", "scissors", "paper"];
+  let res = list[Math.floor(Math.random()*list.length)];
+  // console.log(res);
+  return res;
 }
 
-// input the necessary arguments to determine a victor in RPS
+// input the necessary arguments to determine a roundWinner in RPS
 function singleRound(playerSelection, computerSelection) {
-    // local variables
-    let playerSelection2 = playerSelection.toLowerCase();
-    let computerSelection2 = computerSelection.toLowerCase();
-    let victor = '';
+  // local variable
 
-    // logic
-    
-    if (//human wins
-        (playerSelection2 == 'rock' && computerSelection2 == 'scissors') ||
-        (playerSelection2 == 'paper' && computerSelection2 == 'rock') ||
-        (playerSelection2 == 'scissors' && computerSelection2 == 'paper')) {
-            let victor = 'Human wins!!!';
-            return victor;
-    } else if (//computer wins
-        (playerSelection2 == 'scissors' && computerSelection2 == 'rock') ||
-        (playerSelection2 == 'rock' && computerSelection2 == 'paper') ||
-        (playerSelection2 == 'paper' && computerSelection2 == 'scissors')) {
-            let victor = 'Computer wins!!!';
-            return victor;
-    } else if (//tie
-        (playerSelection2 == 'scissors' && computerSelection2 == 'scissors') ||
-        (playerSelection2 == 'rock' && computerSelection2 == 'rock') ||
-        (playerSelection2 == 'paper' && computerSelection2 == 'paper')){
-            let victor = 'Tie!!!';
-            return victor;
-    } else {//invalid input
-        let victor = 'Please enter valid values, thanks.';
-        return victor;
-    }// end if
-    
+  // logic
+  
+  if (//human wins
+      (playerSelection == 'rock' && computerSelection == 'scissors') ||
+      (playerSelection == 'paper' && computerSelection == 'rock') ||
+      (playerSelection == 'scissors' && computerSelection == 'paper')) {
+          let roundWinner = 'Human wins!!!';
+          playerScore++;
+          console.log(roundWinner);
+  } else if (//computer wins
+      (playerSelection == 'scissors' && computerSelection == 'rock') ||
+      (playerSelection == 'rock' && computerSelection == 'paper') ||
+      (playerSelection == 'paper' && computerSelection == 'scissors')) {
+          let roundWinner = 'Computer wins!!!';
+          computerScore++;
+          console.log(roundWinner);
+  } else if (//tie
+      playerSelection === computerSelection) {
+          let roundWinner = 'Tie!!!';
+          return roundWinner;
+  } else {//invalid input
+      let roundWinner = 'Please enter valid values, thanks.';
+      return roundWinner;
+  }// end if
+  
 }// end singleRound() 
-// console.log(singleRound('rock', computerPlay()))
 
+// function game() {
 
-// Run singleRound 5 times
-function game() {
-    // local variables
-    let playerCounter = 0;
-    let computerCounter = 0;
-    let tiesCounter = 0;
-
-    // game logic
-    for (i = 1; i <= 5; i++) {
-        let playerSelection3 = window.prompt('Choose Rock, Paper, Scissors');
-        let x = singleRound(playerSelection3,  computerPlay() /*'rock'*/);
-        console.log(x);
-        if(x == 'Human wins!!!') {
-            playerCounter++;
-        } else if (x == "Computer wins!!!") {
-            computerCounter++;
-        } else if (x == "Tie!!!") {
-            tiesCounter++;
-        }
-        console.log("Human: " + playerCounter + " Computer: " + computerCounter + " Ties: " + tiesCounter);
-        // console.log(singleRound(playerSelection3, computerPlay()));
-    } 
-    if( playerCounter > computerCounter) {
-        console.log("Human victory!!!");
-    } else if (playerCounter < computerCounter) {
-        console.log("Computer victory!!!");
-    } else if (playerCounter == computerCounter) {
-        console.log("Tie game, try again!!!");
-    } else {
-        console.log("We may have a problem with logic");
-    }
-}
-
-
-// game();
-
-// let a = 0;
-// let b = 0;
-// for(i = 1;i <= 5; i++) {
-//     a++;
-//     b++;
-//     console.log(b);
 // }
+
+// document.getElementById('rock').addEventListener('click', playerChoice);
+// document.getElementById('scissors').addEventListener('click', game);
+// document.getElementById('paper').addEventListener('click', game);
