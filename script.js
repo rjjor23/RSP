@@ -24,8 +24,6 @@ blocks.forEach((block) => {
 
     player.textContent =`${playerScore}`;
     computer.textContent = `${computerScore}`;
-
-    // console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
   });
 });
 
@@ -34,7 +32,6 @@ blocks.forEach((block) => {
 function computerPlay() {
   var list = ["rock", "scissors", "paper"];
   let res = list[Math.floor(Math.random()*list.length)];
-  // console.log(res);
   return res;
 }
 
