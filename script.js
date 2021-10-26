@@ -10,6 +10,8 @@ let roundWinner = '';
 const player = document.querySelector('#player');
 const computer = document.querySelector('#computer');
 const outcome = document.getElementById('outcome');
+const final = document.getElementById('final');
+const reset = document.getElementById('reset');
 
 const blocks = document.querySelectorAll('.block');
 
@@ -24,6 +26,10 @@ blocks.forEach((block) => {
 
     player.textContent =`${playerScore}`;
     computer.textContent = `${computerScore}`;
+
+    if (playerScore == 5 | computerScore == 5) {
+      final.innerText = "Game Over";
+    }
   });
 });
 

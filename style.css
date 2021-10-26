@@ -138,6 +138,22 @@ body {
   display: block;
 }
 
+#final {
+  font-size: 4rem;
+  color: #353535;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Stick No Bills', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  /* border: 2px solid yellow; */
+  display: block;
+  padding-top: 12px;
+}
+
+#reset {
+  display: none;
+}
 /*===============================================*/
 /*=============== Desktop Rules =================*/
 /*===============================================*/
@@ -273,5 +289,22 @@ body {
   /* border: 2px solid yellow; */
   display: block;
   padding-top: 12px;
+}
+
+#final {
+  font-size: 4rem;
+  color: #353535;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Stick No Bills', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  /* border: 2px solid yellow; */
+  display: block;
+  padding-top: 12px;
+}
+
+#reset {
+  display: none;
 }
 } /* end of media query desktop */
