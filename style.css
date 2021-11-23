@@ -153,6 +153,17 @@ body {
 
 #reset {
   display: none;
+  width: 144px;
+  height: 64px;
+  margin: 0 auto;
+  background-color: #a27503;
+  color: #353535;
+  border: 2px solid #353535;
+  border-radius: 8px;
+  font-family: 'Stick No Bills', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  box-shadow: 0 0 1rem #3185fc;
 }
 /*===============================================*/
 /*=============== Desktop Rules =================*/
